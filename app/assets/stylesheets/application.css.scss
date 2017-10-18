@@ -1,0 +1,17 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "posts.scss";
+
+.sidebar {
+  background-color: #e699cc;
+  color: white;
+}
+
+.main_body {
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+input[type="radio"]{
+  margin: 0 3px 0 20px;
+}

@@ -1,0 +1,35 @@
+<%= form_for @post, class: "form-horizonatl" do |f| %>
+  <div class="form">
+
+    <div class="form-group">
+      <%= f.label "description", class: "col-sm-2 control-label" %>
+      <%= f.text_area :item, class: "form-control" %>
+    </div>
+
+    <br>
+
+    <div class="category">
+      <%= f.radio_button :category, 1 %> Offering<br />
+      <%= f.radio_button :category, 2 %> In Search Of <br />
+    </div>
+
+    <br>
+
+    <div class="tags">
+      <%= f.label "exchange details: (ie: porch pick up, willing to deliver, arrange pick-up)", class: "col-sm-4 control-label" %>
+      <%= f.text_area :ppu, class: "form-inline" %>
+    </div>
+
+    <br>
+
+    <div class="location">
+      <%= f.label "location:", class: "col-sm-4 control-label" %>
+      <%= f.text_area :location, class: "form-inline" %>
+    </div>
+
+    <br>
+
+    <%= f.submit 'Save', class: 'btn btn-primary btn-block' %>
+  </div>
+
+<%end%>

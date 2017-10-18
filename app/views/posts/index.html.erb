@@ -1,1 +1,29 @@
-<h1>Posts</h1>
+<tbody>
+  <% @posts.each do |post| %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <%= post.user.first_name %>
+          <%= post.user.last_name %>
+          <div style="float:right">
+            <% if user_allowed %>
+              <%= link_to 'Edit', edit_post_path(post), id: "edit_#{post.id}" %>
+              <%= link_to 'Delete', post_path(post), method: :delete, id: "delete_post_#{post.id}_from_index", data: { confirm: 'Are you sure?' } %>
+            <% end %>
+          </div>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <%= post.item %>
+        <br>
+        <%= post.ppu %>
+      </div>
+      <div class="panel-footer">
+        <%= post.category %>
+        <div style="float:right">
+          <%= post.created_at %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+</tbody>
