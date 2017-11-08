@@ -36,4 +36,4 @@ gem 'devise', '~> 4.3'
 
 gem 'bootstrap-sass'
 
-gem 'cancancan'
+gem 'pundit'

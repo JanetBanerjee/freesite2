@@ -1,3 +1,15 @@
-<h1>Edit</h1>
+<h4>Status</h4>
+<%= form_for @post, class: "form-horizonatl" do |f| %>
+    <div class="form">
+      <div class='form-group'>
+        <%= f.radio_button :status, 'available' %>
+        <%= f.label :status, 'Available' %>
+        <%= f.radio_button :status, 'pending' %>
+        <%= f.label :status, 'Pending' %>
+        <%= f.radio_button :status, 'claimed' %>
+        <%= f.label :status, 'Claimed' %>
+      </div>
+    </div>
+    <% end %>
 
 <%= render 'form' %>

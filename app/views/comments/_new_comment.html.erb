@@ -1,0 +1,14 @@
+<%= form_for @comment, class: "form-horizonatl" do |f| %>
+    <div class="form">
+
+      <div class="form-group">
+        <%= f.label "comment", class: "col-sm-2 control-label" %>
+        <%= f.text_area :comment, class: "form-control" %>
+      </div>
+
+      <br>
+
+      <%= f.submit 'Save', class: 'btn btn-primary btn-block' %>
+    </div>
+
+<%end%>
